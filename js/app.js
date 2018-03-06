@@ -10,10 +10,12 @@ fetch("https://swapi.co/api/films/")
       // Contiene los títulos
       let containerGallery= document.getElementById('site-container');
       let output = ' ';
-
+      let count =1;
       data.results.forEach(function(element) {
         output +=
-        `<h4 class = "${"card-title"}">${"Name"}</h4>
+        ` <img src="assets/images/e${count++}${".jpg"}">
+          <br>
+          <h4 class = "${"card-title"}">${"Name"}</h4>
           <p class = "${"card-text"}">${element.title}</p>
           <br>
           <h4 class = "${"card-title"}">${"Episodes"}</h4>
