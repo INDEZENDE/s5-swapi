@@ -1,0 +1,10 @@
+.card-block, .card {
+  background-color: black;
+  color: white;
+  margin-top: 0px;
+  outline:  1px solid #FFE300;
+}
+
+.card-title, .card-text {
+  display: inline-block;
+}
