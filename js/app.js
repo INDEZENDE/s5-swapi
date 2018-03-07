@@ -1,17 +1,15 @@
 var sectionPeople = document.getElementById('site-container');
-// var modal = document.getElementById('exampleModal');
 
 fetch("https://swapi.co/api/films/")
-    .then(function (response) {
+    .then(response = response => {
         return response.json();
     })
-    .then(function (data) {
-
+    .then(titles = data => {
       // Contiene los títulos
       let containerGallery= document.getElementById('site-container');
       let output = ' ';
       let count =1;
-      data.results.forEach(function(element) {
+      data.results.forEach(moviesDetails = element =>{
         output +=
         ` <img src="assets/images/e${count++}${".jpg"}">
           <br>
@@ -23,13 +21,13 @@ fetch("https://swapi.co/api/films/")
           <br>
           <h4 class = "${"card-title"}">${"Characters"}</h4>
           <br>`
-          let output2 = ' ';
           element.characters.forEach(function(element1){
-            output +=
-            `<p class = "${"card-text"}">${element1}</p>
+            output +=//Guarda las características de cada personaje
+            `<p class = "${"card-text"}" data-toggle="${"modal"}" data-target="${"#modalCharacters"}" data-whatever="${"@mdo"}">${element1} </p>
             <br>`
-            containerGallery.innerHTML = output2;
+            containerGallery.innerHTML = output;
             // console.log(element1);
+
             $.ajax({//Segunda petición
               url: element1
           }).done(gettingCharacters);
@@ -37,6 +35,7 @@ fetch("https://swapi.co/api/films/")
           // Inicia la función para obtener el segundo request
 
           function gettingCharacters (element){//Función que depende de la segunda petición
+
             console.log(element.name);
             console.log(element.height);
             console.log(element.mass);
@@ -44,12 +43,10 @@ fetch("https://swapi.co/api/films/")
             console.log(element.skin_color);
           }
 
-
-
-
           })
         containerGallery.innerHTML = output;
         });
+
 
     })
     .catch(function (error) {
