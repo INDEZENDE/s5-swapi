@@ -1,10 +1,25 @@
-.card-block, .card {
+body {
+   background-image: url("../assets/images/sw.jpg");
+   background-color: #cccccc;
+}
+.card-title {
+  font-size: 3rem;
+  color: yellow;
+}
+
+.card-block, .card  {
   background-color: black;
   color: white;
+  font-size: 2rem;
   margin-top: 0px;
   outline:  1px solid #FFE300;
+  width: 20em;
 }
 
 .card-title, .card-text {
   display: inline-block;
+}
+
+.films-img{
+  width: 70%;
 }

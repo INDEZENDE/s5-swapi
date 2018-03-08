@@ -5,63 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    <title>Pokemon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
+    <title>Swapi</title>
   </head>
-  <body background="assets/images/sw.jpg" class="container">
-    <img src="assets/images/title.png" />
-    <div class="row">
-      <div class="col-sm-5 offset-sm-2 ">
-        <div class="card" style="width: 20rem;">
-          <div class="card-block" id="site-container"></div>
+  <body>
+    <div  class="container-fluid">
+      <img src="assets/images/title.png" style="width: 50%;">
+      <div class="row">
+        <div class="col-md">
+          <div class="card">
+            <div class="card-block" id="site-container"></div>
+          </div>
         </div>
       </div>
     </div>
 
 
-<!-- Modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="Title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="form-control-label"></label>
-            <input type="text" class="form-control" id="name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="form-control-label"> </label>
-            <textarea class="form-control" id="height"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="form-control-label"> </label>
-            <textarea class="form-control" id="mass"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="form-control-label"> </label>
-            <textarea class="form-control" id="hairColor"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="form-control-label"> </label>
-            <textarea class="form-control" id="skinColor"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+
+    <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" data-whatever="@mdo">Open modal for @mdo</button>
+
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Título -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <!-- Etiqueta height -->
+            <div class="form-group">
+              <label id="height" for="recipient-name" class="form-control-label"></label>
+            </div>
+            <!-- Etiqueta mass -->
+            <div class="form-group">
+              <label id="mass" for="recipient-name" class="form-control-label"></label>
+            </div>
+            <!-- Etiqueta hair_color -->
+            <div class="form-group">
+              <label id="hair_color" for="recipient-name" class="form-control-label"></label>
+            </div>
+            <!-- Etiqueta skin_color -->
+            <div class="form-group">
+              <label id="skin_color" for="recipient-name" class="form-control-label"></label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 
 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
